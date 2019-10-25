@@ -39,6 +39,6 @@ public class HelloConsumerEndpoint {
      */
     @RequestMapping(value = "/{name}", method = RequestMethod.GET)
     public String hello(@PathVariable String name){
-        return this.helloService.hello(name);
+        return this.helloService.hello(name+",msg from consumer");
     }
 }
