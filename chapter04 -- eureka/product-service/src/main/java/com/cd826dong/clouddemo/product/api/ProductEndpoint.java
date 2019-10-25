@@ -95,7 +95,7 @@ public class ProductEndpoint {
      * @return
      */
     protected UserDto loadUser(Long userId) {
-        UserDto userDto = this.restTemplate.getForEntity("http://USERSERVICE/users/{id}", UserDto.class, userId).getBody();
+        UserDto userDto = this.restTemplate.getForEntity("http://192.168.6.116:2100/users/{id}", UserDto.class, userId).getBody();
         return userDto;
     }
 }
